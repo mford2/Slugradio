@@ -1,24 +1,17 @@
 # SlugRadio
 
-SlugRadio is a Discord music bot written in Java, inspired by the JMusicBot (Jagrosh) project.
+SlugRadio is a Discord music bot written in Java, inspired by JMusicBot (Jagrosh).
 It features:
-- Fair/weighted song scheduling between multiple users
+- Weighted/fair song scheduling between multiple users
 - YouTube and local playlist support
-- `!nowplaying` and `!seek` commands
-- Dockerized for Ubuntu deployment
+- !nowplaying and !seek commands
+- Dockerized with multi-stage build for Ubuntu deployment
 
 ## Setup
 
 ```bash
 git clone https://github.com/yourusername/slugradio.git
 cd slugradio
-mvn package
-java -jar target/slugradio.jar
-```
-
-## Docker
-
-```bash
-docker build -t slugradio .
-docker run -d --name slugradio -e DISCORD_TOKEN=your_token_here slugradio
+export DISCORD_TOKEN="your_bot_token_here"
+docker compose up -d --build
 ```
