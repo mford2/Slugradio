@@ -1,0 +1,7 @@
+version: '3'
+services:
+  slugradio:
+    build: .
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+    restart: unless-stopped
