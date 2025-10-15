@@ -1,0 +1,2 @@
+# Slugradio
+Discord Radio bot 
